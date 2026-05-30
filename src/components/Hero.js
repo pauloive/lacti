@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import './Hero.css';
 
@@ -6,8 +5,20 @@ export default function Hero() {
   return (
     <section className="hero" id="inicio">
 
-      {/* Fundo gradiente (substituir por imagem real na Fase 2) */}
-      <div className="hero-gradient" aria-hidden="true" />
+      {/* Vídeo de fundo */}
+      <video
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+      >
+        <source src="/videos/hero-video.mp4" type="video/mp4" />
+      </video>
+
+      {/* Overlay escuro sobre o vídeo */}
       <div className="hero-overlay" aria-hidden="true" />
 
       <div className="container">
