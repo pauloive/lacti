@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import LogoPeixe from './LogoPeixe';
 import './Navbar.css';
 
 const links = [
@@ -27,14 +27,7 @@ export default function Navbar() {
       <div className="container navbar-interior">
 
         <Link href="/" className="navbar-logo">
-          <Image
-            src="/images/lactifoz-logo-transparente.png"
-            alt="Lactifoz"
-            width={120}
-            height={55}
-            priority
-            style={{ width: '120px', height: 'auto' }}
-          />
+          <LogoPeixe width={130} height={58} />
         </Link>
 
         <nav className={`navbar-links${menuAberto ? ' aberto' : ''}`} aria-label="Navegação principal">
