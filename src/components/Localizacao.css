@@ -1,0 +1,148 @@
+/* =============================================
+   LOCALIZAÇÃO
+   ============================================= */
+
+.localizacao {
+  background-color: var(--cor-branco);
+}
+
+.localizacao-interior {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espaco-3xl);
+  align-items: start;
+}
+
+/* Coluna de informação */
+.localizacao-etiqueta {
+  display: inline-block;
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  color: var(--cor-dourado);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--espaco-sm);
+}
+
+.localizacao-titulo {
+  margin-bottom: var(--espaco-xl);
+}
+
+/* Blocos de contacto */
+.localizacao-blocos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-lg);
+}
+
+.localizacao-bloco {
+  display: flex;
+  gap: var(--espaco-md);
+  align-items: flex-start;
+}
+
+.localizacao-bloco-icone {
+  width: 44px;
+  height: 44px;
+  background-color: var(--cor-marinho);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--cor-dourado);
+}
+
+.localizacao-bloco-icone svg {
+  width: 20px;
+  height: 20px;
+}
+
+.localizacao-bloco-titulo {
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  color: var(--cor-texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+
+.localizacao-bloco-texto {
+  font-size: var(--texto-base);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+.localizacao-bloco-texto a {
+  color: var(--cor-marinho);
+  font-weight: 600;
+  transition: color var(--transicao);
+}
+
+.localizacao-bloco-texto a:hover {
+  color: var(--cor-dourado);
+}
+
+/* Horário */
+.horario-grelha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px var(--espaco-md);
+  margin-top: var(--espaco-xs);
+}
+
+.horario-linha {
+  font-size: var(--texto-sm);
+  color: var(--cor-texto-suave);
+}
+
+.horario-linha strong {
+  color: var(--cor-texto);
+  display: block;
+}
+
+/* Mapa */
+.localizacao-mapa {
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: var(--sombra-md);
+}
+
+.localizacao-mapa iframe {
+  width: 100%;
+  height: 480px;
+  border: none;
+  display: block;
+}
+
+.localizacao-mapa-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(10, 31, 63, 0.6), transparent);
+  padding: var(--espaco-md);
+  pointer-events: none;
+}
+
+.localizacao-mapa-label {
+  font-size: var(--texto-sm);
+  font-weight: 600;
+  color: var(--cor-branco);
+}
+
+/* =============================================
+   RESPONSIVO
+   ============================================= */
+
+@media (max-width: 900px) {
+  .localizacao-interior {
+    grid-template-columns: 1fr;
+    gap: var(--espaco-xl);
+  }
+
+  .localizacao-mapa iframe {
+    height: 320px;
+  }
+}
