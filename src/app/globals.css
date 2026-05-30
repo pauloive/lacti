@@ -1,17 +1,73 @@
+/* =============================================
+   DESIGN SYSTEM — Lactifoz
+   ============================================= */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Cores */
+  --cor-marinho:     #0a1f3f;
+  --cor-marinho-mid: #0d2a52;
+  --cor-marinho-claro: #1a3a6b;
+  --cor-dourado:     #c9a84c;
+  --cor-dourado-claro: #e0c070;
+  --cor-branco:      #ffffff;
+  --cor-cinza:       #f5f5f5;
+  --cor-cinza-mid:   #e0e0e0;
+  --cor-texto:       #1a1a1a;
+  --cor-texto-suave: #555555;
+
+  /* Tipografia */
+  --fonte-corpo:    var(--font-inter), Arial, sans-serif;
+  --fonte-titulo:   var(--font-playfair), Georgia, serif;
+
+  /* Tamanhos de texto */
+  --texto-xs:   0.75rem;
+  --texto-sm:   0.875rem;
+  --texto-base: 1rem;
+  --texto-lg:   1.125rem;
+  --texto-xl:   1.25rem;
+  --texto-2xl:  1.5rem;
+  --texto-3xl:  1.875rem;
+  --texto-4xl:  2.25rem;
+  --texto-5xl:  3rem;
+  --texto-6xl:  3.75rem;
+
+  /* Espaçamentos */
+  --espaco-xs:  0.5rem;
+  --espaco-sm:  1rem;
+  --espaco-md:  1.5rem;
+  --espaco-lg:  2rem;
+  --espaco-xl:  3rem;
+  --espaco-2xl: 5rem;
+  --espaco-3xl: 8rem;
+
+  /* Layout */
+  --largura-max: 1200px;
+  --navbar-altura: 80px;
+
+  /* Sombras */
+  --sombra-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --sombra-md: 0 4px 20px rgba(0, 0, 0, 0.25);
+  --sombra-lg: 0 8px 40px rgba(0, 0, 0, 0.35);
+
+  /* Transições */
+  --transicao: 0.3s ease;
+  --transicao-lenta: 0.6s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* =============================================
+   RESET E BASE
+   ============================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-  height: 100%;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -21,20 +77,13 @@ body {
 }
 
 body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--fonte-corpo);
+  font-size: var(--texto-base);
+  color: var(--cor-texto);
+  background-color: var(--cor-branco);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {
@@ -42,8 +91,148 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* =============================================
+   UTILITÁRIOS
+   ============================================= */
+
+.container {
+  width: 100%;
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: 0 var(--espaco-lg);
+}
+
+.secao {
+  padding: var(--espaco-3xl) 0;
+}
+
+.secao-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: var(--texto-4xl);
+  color: var(--cor-marinho);
+  margin-bottom: var(--espaco-sm);
+  line-height: 1.2;
+}
+
+.secao-subtitulo {
+  font-size: var(--texto-lg);
+  color: var(--cor-texto-suave);
+  margin-bottom: var(--espaco-xl);
+  max-width: 600px;
+}
+
+.linha-dourada {
+  width: 60px;
+  height: 3px;
+  background-color: var(--cor-dourado);
+  margin-bottom: var(--espaco-md);
+}
+
+/* =============================================
+   BOTÕES
+   ============================================= */
+
+.btn-primario {
+  display: inline-block;
+  background-color: var(--cor-dourado);
+  color: var(--cor-marinho);
+  font-family: var(--fonte-corpo);
+  font-weight: 700;
+  font-size: var(--texto-base);
+  padding: 0.875rem 2rem;
+  border: 2px solid var(--cor-dourado);
+  cursor: pointer;
+  transition: background-color var(--transicao), color var(--transicao);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btn-primario:hover {
+  background-color: transparent;
+  color: var(--cor-dourado);
+}
+
+.btn-secundario {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--cor-branco);
+  font-family: var(--fonte-corpo);
+  font-weight: 700;
+  font-size: var(--texto-base);
+  padding: 0.875rem 2rem;
+  border: 2px solid var(--cor-branco);
+  cursor: pointer;
+  transition: background-color var(--transicao), color var(--transicao);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btn-secundario:hover {
+  background-color: var(--cor-branco);
+  color: var(--cor-marinho);
+}
+
+/* =============================================
+   ANIMAÇÕES DE SCROLL
+   ============================================= */
+
+.revelar {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.revelar.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.revelar-esquerda {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.revelar-esquerda.visivel {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.revelar-direita {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.revelar-direita.visivel {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* =============================================
+   RESPONSIVO — BASE MOBILE
+   ============================================= */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--espaco-sm);
+  }
+
+  .secao {
+    padding: var(--espaco-2xl) 0;
+  }
+
+  .secao-titulo {
+    font-size: var(--texto-3xl);
   }
 }

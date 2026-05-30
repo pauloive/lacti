@@ -1,0 +1,165 @@
+/* =============================================
+   FOOTER
+   ============================================= */
+
+.footer {
+  background-color: var(--cor-marinho);
+  color: var(--cor-branco);
+  padding-top: var(--espaco-3xl);
+}
+
+.footer-grelha {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--espaco-2xl);
+  padding-bottom: var(--espaco-2xl);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Coluna — Marca */
+.footer-logo {
+  display: inline-block;
+  margin-bottom: var(--espaco-md);
+  border-radius: 4px;
+}
+
+.footer-logo img {
+  width: 130px;
+  height: auto;
+}
+
+.footer-descricao {
+  font-size: var(--texto-sm);
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.8;
+  max-width: 260px;
+}
+
+/* Colunas de links */
+.footer-coluna-titulo {
+  font-family: var(--fonte-corpo);
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  color: var(--cor-dourado);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: var(--espaco-md);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-xs);
+}
+
+.footer-link {
+  font-size: var(--texto-sm);
+  color: rgba(255, 255, 255, 0.65);
+  transition: color var(--transicao);
+}
+
+.footer-link:hover {
+  color: var(--cor-dourado);
+}
+
+/* Contacto */
+.footer-contacto-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--espaco-xs);
+  font-size: var(--texto-sm);
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: var(--espaco-xs);
+  line-height: 1.5;
+}
+
+.footer-contacto-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  opacity: 0.7;
+}
+
+/* Redes sociais */
+.footer-redes {
+  display: flex;
+  gap: var(--espaco-sm);
+  margin-top: var(--espaco-md);
+}
+
+.footer-rede {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.65);
+  transition: border-color var(--transicao), color var(--transicao), background-color var(--transicao);
+}
+
+.footer-rede:hover {
+  border-color: var(--cor-dourado);
+  color: var(--cor-dourado);
+  background-color: rgba(201, 168, 76, 0.1);
+}
+
+.footer-rede svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Barra inferior */
+.footer-barra {
+  padding: var(--espaco-md) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--espaco-sm);
+}
+
+.footer-copyright {
+  font-size: var(--texto-xs);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-legal {
+  display: flex;
+  gap: var(--espaco-md);
+}
+
+.footer-legal-link {
+  font-size: var(--texto-xs);
+  color: rgba(255, 255, 255, 0.4);
+  transition: color var(--transicao);
+}
+
+.footer-legal-link:hover {
+  color: var(--cor-dourado);
+}
+
+/* =============================================
+   RESPONSIVO
+   ============================================= */
+
+@media (max-width: 900px) {
+  .footer-grelha {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grelha {
+    grid-template-columns: 1fr;
+    gap: var(--espaco-xl);
+  }
+
+  .footer-barra {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

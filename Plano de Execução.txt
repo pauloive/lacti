@@ -1,0 +1,145 @@
+Plano de Execução — Landing Page Corporativa (Setor Alimentar)
+Visão Geral
+Vamos construir uma landing page moderna e premium para uma empresa do setor alimentar, inspirada no estilo do caxamar.pt. O site terá um visual escuro/azul-marinho elegante, com imagens grandes de qualidade, animações suaves, e secções claras: hero banner, sobre nós, produtos (3-5 categorias), mapa de localização, redes sociais e footer. Tudo em português, responsivo (mobile + desktop), e publicado na Vercel com domínio próprio.
+
+Stack Recomendada
+Tecnologia	Porquê
+Next.js (framework React)	Gera páginas rápidas (SEO excelente), fácil de publicar na Vercel, e é a stack mais popular para sites modernos
+Vanilla CSS	Controlo total do design premium sem dependências extra — ideal para o visual elegante que queres
+Google Fonts (Inter / Playfair Display)	Tipografia premium gratuita — Inter para corpo de texto, Playfair para títulos elegantes
+Vercel	Já tens conta — hosting gratuito, deploys automáticos a partir do GitHub, domínio custom incluído
+GitHub	Já tens conta — controlo de versões e integração automática com a Vercel
+Google Maps Embed	Mapa gratuito para mostrar a localização da empresa
+Custo mensal estimado: ~0€ (Vercel free tier) + ~10-15€/ano para domínio .pt (se comprares)
+
+FASES DO PROJETO
+📦 FASE 1 — MVP Publicável (Semana 1-2)
+Objetivo: Ter a estrutura base online com visual premium. Já se pode mostrar a alguém.
+
+ 1.1 Inicializar projeto Next.js no workspace (c:\Formclaude\sitelact)
+ 1.2 Configurar estrutura de pastas (/public/images, /src/app, etc.)
+ 1.3 Criar o ficheiro de design system CSS (variáveis de cores azul-marinho/dourado, tipografia, espaçamentos, animações base)
+ 1.4 Criar o componente Navbar — logo placeholder + links de navegação (Início, Sobre, Produtos, Localização) com menu hamburger no mobile
+ 1.5 Criar o Hero Banner — imagem de fundo grande (gerada por IA), texto de slogan sobreposto, botão CTA ("Conheça os Nossos Produtos")
+ 1.6 Criar a secção Sobre Nós — texto placeholder com a história/missão da empresa, imagem lateral
+ 1.7 Criar o Footer — logo, links de navegação, redes sociais (ícones placeholder), copyright
+ 1.8 Configurar SEO base (title, meta description, favicon placeholder)
+ 1.9 Fazer deploy na Vercel via GitHub — site online!
+ 1.10 Testar responsividade (mobile, tablet, desktop)
+🍽️ FASE 2 — Secção de Produtos (Semana 3)
+Objetivo: Adicionar a secção de produtos com imagens apelativas, estilo Caxamar.
+
+ 2.1 Gerar imagens de produtos com IA (3-5 categorias alimentares)
+ 2.2 Criar o componente ProductCard — imagem + título + descrição curta, com hover effect
+ 2.3 Criar a secção de Produtos na página — layout alternado (imagem à esquerda/direita, como o Caxamar)
+ 2.4 Adicionar animações de scroll (elementos aparecem suavemente ao fazer scroll)
+ 2.5 Deploy e testar
+📍 FASE 3 — Mapa + Redes Sociais + Detalhes (Semana 4)
+Objetivo: Completar todas as secções informativas.
+
+ 3.1 Criar a secção de Localização — Google Maps embed + morada + horário + telefone
+ 3.2 Adicionar ícones de redes sociais reais no footer (links para Instagram, Facebook, etc.)
+ 3.3 Criar a barra de valores/serviços (ícones com texto tipo "Qualidade Garantida", "Tradição", "Frescura" — como a barra do Caxamar)
+ 3.4 Deploy e testar
+✨ FASE 4 — Polimento Visual (Semana 5)
+Objetivo: Elevar o design ao nível premium. É aqui que o site passa de "bom" a "wow".
+
+ 4.1 Adicionar micro-animações avançadas (parallax no hero, hover nos produtos, transições suaves)
+ 4.2 Polir a tipografia e espaçamentos em todas as secções
+ 4.3 Otimizar imagens (formatos WebP, lazy loading, tamanhos corretos)
+ 4.4 Testar performance (PageSpeed Insights) e corrigir problemas
+ 4.5 Adicionar favicon real e og:image para partilha em redes sociais
+ 4.6 Deploy final e revisão completa
+🌐 FASE 5 — Domínio Próprio (Semana 6)
+Objetivo: Ligar o domínio personalizado e finalizar.
+
+ 5.1 Comprar o domínio (ex: minhaempresa.pt — em registos como ptisp.pt, amen.pt, ou Namecheap)
+ 5.2 Configurar o domínio custom na Vercel (painel Vercel → Settings → Domains)
+ 5.3 Configurar DNS (apontar para Vercel)
+ 5.4 Verificar HTTPS automático (a Vercel trata disto)
+ 5.5 Testar tudo com o domínio final
+CLAUDE.md Sugerido
+TIP
+
+Este ficheiro é criado na raiz do projeto. O Claude Code lê-o automaticamente para saber o contexto do projeto.
+
+markdown
+
+# CLAUDE.md — Landing Page Corporativa
+## Projeto
+Landing page de apresentação para uma empresa do setor alimentar (Portugal).
+Inspiração visual: https://caxamar.pt — design premium, limpo, elegante.
+## Stack
+- Next.js (App Router)
+- Vanilla CSS (sem Tailwind)
+- Google Fonts: Inter (corpo), Playfair Display (títulos)
+- Deploy: Vercel + GitHub
+## Design
+- Paleta: azul-marinho escuro (#0a1f3f), dourado (#c9a84c), branco (#ffffff), cinza (#f5f5f5)
+- Estilo premium: imagens grandes, animações suaves, espaçamentos generosos
+- Mobile-first: tudo deve funcionar bem em telemóvel
+- Idioma: Português (PT-PT)
+## Estrutura da Página
+1. Navbar (logo + links + hamburger mobile)
+2. Hero banner (imagem grande + slogan + CTA)
+3. Barra de valores/serviços (ícones + texto)
+4. Sobre Nós (texto + imagem)
+5. Produtos (3-5 categorias com imagens, layout alternado)
+6. Localização (Google Maps + morada)
+7. Footer (logo + links + redes sociais + copyright)
+## Regras
+- Usar textos placeholder em português — o cliente substitui depois
+- Nome da empresa: usar "[Nome da Empresa]" como placeholder
+- Cada componente num ficheiro separado em /src/components/
+- CSS global em /src/app/globals.css com variáveis CSS
+- Imagens em /public/images/
+- Usar semantic HTML (header, main, section, footer)
+- Todos os IDs devem ser únicos e descritivos
+- Manter SEO: title, meta description, heading hierarchy (um h1 por página)
+- Código limpo e comentado em português
+Como Executar no Claude Code
+IMPORTANT
+
+Segue estes passos para trabalhar com a IA de forma segura e controlada.
+
+Passo a passo:
+Abre o projeto na pasta c:\Formclaude\sitelact
+
+Cria o CLAUDE.md — Cola o conteúdo sugerido acima num ficheiro CLAUDE.md na raiz do projeto (o Claude Code vai lê-lo automaticamente)
+
+Trabalha uma tarefa de cada vez — Por exemplo:
+
+"Faz a tarefa 1.1: Inicializa o projeto Next.js nesta pasta"
+
+Revê o que o Claude propõe — Ele vai mostrar-te o que vai fazer. Só avança se concordares.
+
+Testa antes de avançar — Depois de cada tarefa, corre npm run dev e vê o resultado no browser (http://localhost:3000)
+
+Avança para a tarefa seguinte — Quando estiveres satisfeito:
+
+"Faz a tarefa 1.2: Configurar a estrutura de pastas"
+
+Faz commit no GitHub — No final de cada sessão, faz commit:
+
+"Faz git add, commit e push das alterações"
+
+Dicas:
+Se algo não ficar bem, diz: "Melhora o visual de X, quero que fique mais parecido com o Caxamar"
+Se quiseres trocar um placeholder, diz: "Substitui [Nome da Empresa] por 'Minha Empresa Lda'"
+Se quiseres ver como fica no telemóvel, usa o DevTools do browser (F12 → toggle device toolbar)
+Estimativa de Tempo
+Fase	Tempo estimado	Semanas (~3h/semana)
+Fase 1 — MVP	~4-6 horas	1-2 semanas
+Fase 2 — Produtos	~2-3 horas	1 semana
+Fase 3 — Mapa + Social	~2-3 horas	1 semana
+Fase 4 — Polimento	~2-3 horas	1 semana
+Fase 5 — Domínio	~1 hora	1 sessão
+Total	~12-16 horas	~4-6 semanas
+Orçamento Mensal
+Item	Custo
+Vercel (hosting)	0€ (free tier — suficiente para landing page)
+GitHub	0€ (free)
+Domínio .pt	~10-15€/ano (~1€/mês)
+Google Fonts	0€
+Google Maps Embed	0€
+Total mensal	~1€/mês ✅ Bem dentro dos 20€
