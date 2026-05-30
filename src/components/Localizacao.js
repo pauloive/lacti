@@ -27,8 +27,8 @@ export default function Localizacao() {
                 <div>
                   <p className="localizacao-bloco-titulo">Morada</p>
                   <p className="localizacao-bloco-texto">
-                    [Rua / Zona Industrial],<br />
-                    [Código Postal] — [Localidade],<br />
+                    Rua do Centro Social Nº 4,<br />
+                    3105-057 Carriço,<br />
                     Portugal
                   </p>
                 </div>
@@ -44,7 +44,8 @@ export default function Localizacao() {
                 <div>
                   <p className="localizacao-bloco-titulo">Telefone</p>
                   <p className="localizacao-bloco-texto">
-                    <a href="tel:+351000000000">[+351 000 000 000]</a>
+                    <a href="tel:+351236950991">236 950 991</a><br />
+                    <a href="tel:+351913734105">913 734 105</a>
                   </p>
                 </div>
               </div>
@@ -60,7 +61,7 @@ export default function Localizacao() {
                 <div>
                   <p className="localizacao-bloco-titulo">Email</p>
                   <p className="localizacao-bloco-texto">
-                    <a href="mailto:geral@lactifoz.pt">[geral@lactifoz.pt]</a>
+                    <a href="mailto:geral@lactifoz.pt">geral@lactifoz.pt</a>
                   </p>
                 </div>
               </div>
@@ -77,12 +78,12 @@ export default function Localizacao() {
                   <p className="localizacao-bloco-titulo">Horário</p>
                   <div className="horario-grelha">
                     <div className="horario-linha">
-                      <strong>Seg — Sex</strong>
-                      08:00 — 18:00
+                      <strong>Seg — Sáb</strong>
+                      09:00 — 13:00
                     </div>
                     <div className="horario-linha">
-                      <strong>Sábado</strong>
-                      08:00 — 13:00
+                      <strong>Seg — Sáb</strong>
+                      15:00 — 19:00
                     </div>
                     <div className="horario-linha">
                       <strong>Domingo</strong>
@@ -98,14 +99,14 @@ export default function Localizacao() {
           {/* Mapa */}
           <div className="localizacao-mapa revelar-direita">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48906.17!2d-8.8578!3d40.1500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22f5f8b9a6f5f5%3A0x123456789!2sFigueira%20da%20Foz!5e0!3m2!1spt!2spt!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884!2d-8.8034009!3d39.9910348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd224037647f4441%3A0x357f075ec193fb5d!2sLactifoz%2C%20SA.!5e0!3m2!1spt!2spt!4v1748600000000!5m2!1spt!2spt"
               title="Localização Lactifoz no Google Maps"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
             <div className="localizacao-mapa-overlay">
-              <p className="localizacao-mapa-label">Lactifoz, S.A. — [Substituir com morada real]</p>
+              <p className="localizacao-mapa-label">Lactifoz, S.A. — Rua do Centro Social Nº 4, Carriço</p>
             </div>
           </div>
 

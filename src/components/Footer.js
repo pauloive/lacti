@@ -62,14 +62,8 @@ export default function Footer() {
               O melhor do mar para a sua mesa.
             </p>
             <div className="footer-redes">
-              <a href="#" className="footer-rede" aria-label="Instagram">
-                <IconeInstagram />
-              </a>
-              <a href="#" className="footer-rede" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=100008940099606" className="footer-rede" aria-label="Facebook da Lactifoz" target="_blank" rel="noopener noreferrer">
                 <IconeFacebook />
-              </a>
-              <a href="#" className="footer-rede" aria-label="LinkedIn">
-                <IconeLinkedIn />
               </a>
             </div>
           </div>
@@ -105,20 +99,20 @@ export default function Footer() {
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                [Morada da empresa],<br />Portugal
+                Rua do Centro Social Nº 4,<br />3105-057 Carriço, Portugal
               </div>
               <div className="footer-contacto-item">
                 <svg className="footer-contacto-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.48 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 16z" />
                 </svg>
-                [+351 000 000 000]
+                236 950 991 / 913 734 105
               </div>
               <div className="footer-contacto-item">
                 <svg className="footer-contacto-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
-                [geral@lactifoz.pt]
+                geral@lactifoz.pt
               </div>
             </div>
           </div>
