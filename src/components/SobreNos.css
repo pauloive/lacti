@@ -69,42 +69,24 @@
   position: relative;
 }
 
-.sobre-imagem-placeholder {
+.sobre-imagem-foto {
+  position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
-  background: linear-gradient(145deg, var(--cor-marinho) 0%, var(--cor-marinho-claro) 100%);
-  border-radius: 2px;
   overflow: hidden;
-  position: relative;
+  border-radius: 2px;
+  box-shadow: var(--sombra-lg);
 }
 
 /* Moldura decorativa dourada deslocada */
-.sobre-imagem-placeholder::before {
+.sobre-imagem-foto::after {
   content: '';
   position: absolute;
   inset: 16px -16px -16px 16px;
   border: 2px solid var(--cor-dourado);
   border-radius: 2px;
   z-index: -1;
-}
-
-/* Ícone central no placeholder */
-.sobre-imagem-placeholder::after {
-  content: '🐟';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 5rem;
-  opacity: 0.15;
-}
-
-.sobre-imagem-legenda {
-  margin-top: var(--espaco-sm);
-  font-size: var(--texto-xs);
-  color: var(--cor-texto-suave);
-  text-align: center;
-  font-style: italic;
+  pointer-events: none;
 }
 
 /* =============================================
@@ -125,7 +107,7 @@
     width: 100%;
   }
 
-  .sobre-imagem-placeholder::before {
+  .sobre-imagem-foto::after {
     display: none;
   }
 }

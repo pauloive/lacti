@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import ContadorAnimado from './ContadorAnimado';
 import './SobreNos.css';
 
@@ -51,10 +52,16 @@ export default function SobreNos() {
 
           {/* Imagem */}
           <div className="sobre-imagem-wrapper revelar-direita">
-            <div className="sobre-imagem-placeholder" role="img" aria-label="Fotografia da Lactifoz" />
-            <p className="sobre-imagem-legenda">
-              [Substituir por fotografia das instalações ou equipa]
-            </p>
+            <div className="sobre-imagem-foto">
+              <Image
+                src="/images/sobre-nos-barco.jpg"
+                alt="Barco de pesca da Lactifoz no oceano"
+                fill
+                sizes="(max-width: 900px) 100vw, 45vw"
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                priority={false}
+              />
+            </div>
           </div>
 
         </div>
