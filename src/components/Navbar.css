@@ -8,9 +8,17 @@
   left: 0;
   right: 0;
   height: var(--navbar-altura);
-  background-color: var(--cor-marinho);
+  background-color: rgba(10, 31, 63, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   z-index: 1000;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: none;
+  transition: background-color var(--transicao), box-shadow var(--transicao);
+}
+
+.navbar.scrollado {
+  background-color: rgba(10, 31, 63, 0.97);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
 }
 
 .navbar-interior {

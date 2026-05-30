@@ -1,9 +1,10 @@
+import ContadorAnimado from './ContadorAnimado';
 import './SobreNos.css';
 
 const stats = [
-  { numero: '30', sufixo: '+', texto: 'Anos de\nExperiência' },
-  { numero: '100', sufixo: '%', texto: 'Qualidade\nCertificada' },
-  { numero: '5', sufixo: '+', texto: 'Categorias\nde Produto' },
+  { numero: 30, sufixo: '+', texto: 'Anos de\nExperiência' },
+  { numero: 100, sufixo: '%', texto: 'Qualidade\nCertificada' },
+  { numero: 5, sufixo: '+', texto: 'Categorias\nde Produto' },
 ];
 
 export default function SobreNos() {
@@ -36,7 +37,7 @@ export default function SobreNos() {
               {stats.map((stat) => (
                 <div key={stat.texto}>
                   <div className="stat-numero">
-                    {stat.numero}<span>{stat.sufixo}</span>
+                    <ContadorAnimado valor={stat.numero} sufixo={stat.sufixo} />
                   </div>
                   <div className="stat-texto">
                     {stat.texto.split('\n').map((linha, i) => (

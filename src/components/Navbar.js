@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import './Navbar.css';
@@ -14,9 +14,16 @@ const links = [
 
 export default function Navbar() {
   const [menuAberto, setMenuAberto] = useState(false);
+  const [scrollado, setScrollado] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrollado(window.scrollY > 60);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <header className="navbar">
+    <header className={`navbar${scrollado ? ' scrollado' : ''}`}>
       <div className="container navbar-interior">
 
         <Link href="/" className="navbar-logo">

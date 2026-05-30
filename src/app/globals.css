@@ -50,8 +50,8 @@
   --sombra-lg: 0 8px 40px rgba(0, 0, 0, 0.35);
 
   /* Transições */
-  --transicao: 0.3s ease;
-  --transicao-lenta: 0.6s ease;
+  --transicao: 0.25s ease;
+  --transicao-lenta: 0.55s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* =============================================

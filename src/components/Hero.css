@@ -38,10 +38,32 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 70% 50%, rgba(26, 58, 107, 0.6) 0%, transparent 60%),
-    radial-gradient(ellipse at 20% 80%, rgba(201, 168, 76, 0.08) 0%, transparent 50%),
-    linear-gradient(135deg, #0a1f3f 0%, #0d2a52 50%, #1a3a6b 100%);
+    radial-gradient(ellipse at 70% 50%, rgba(26, 58, 107, 0.7) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(201, 168, 76, 0.06) 0%, transparent 50%),
+    linear-gradient(135deg, #061526 0%, #0a1f3f 40%, #0d2a52 70%, #1a3a6b 100%);
   z-index: 0;
+}
+
+/* Brilho dourado animado */
+.hero-gradient::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg at 70% 60%,
+    transparent 0deg,
+    rgba(201, 168, 76, 0.04) 30deg,
+    transparent 60deg
+  );
+  animation: rotacaoSutil 20s linear infinite;
+}
+
+@keyframes rotacaoSutil {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 /* Conteúdo */
