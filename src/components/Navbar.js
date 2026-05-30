@@ -28,7 +28,7 @@ export default function Navbar() {
 
         <Link href="/" className="navbar-logo">
           <Image
-            src="/images/lactifoz-logo.png"
+            src="/images/lactifoz-logo-transparente.png"
             alt="Lactifoz"
             width={120}
             height={55}

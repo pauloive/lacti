@@ -60,42 +60,12 @@
   min-height: 420px;
 }
 
-.produto-imagem-placeholder {
-  position: absolute;
-  inset: 0;
-  transition: transform 0.6s ease;
+.produto-imagem-foto {
+  transition: transform 0.6s ease !important;
 }
 
-.produto-card:hover .produto-imagem-placeholder {
-  transform: scale(1.04);
-}
-
-/* Paleta por categoria */
-.produto-imagem-placeholder.peixe {
-  background: linear-gradient(135deg, #0a2a4a 0%, #1a5276 50%, #2e86c1 100%);
-}
-.produto-imagem-placeholder.marisco {
-  background: linear-gradient(135deg, #1a3a2a 0%, #1e8449 50%, #27ae60 100%);
-}
-.produto-imagem-placeholder.conservas {
-  background: linear-gradient(135deg, #4a2000 0%, #b7500a 50%, #e67e22 100%);
-}
-.produto-imagem-placeholder.congelados {
-  background: linear-gradient(135deg, #0a2a3a 0%, #0e6b8a 50%, #17a589 100%);
-}
-.produto-imagem-placeholder.fumados {
-  background: linear-gradient(135deg, #1a1a1a 0%, #4a3728 50%, #7d6147 100%);
-}
-
-/* Ícone decorativo no placeholder */
-.produto-imagem-placeholder::after {
-  content: attr(data-icone);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 7rem;
-  opacity: 0.15;
+.produto-card:hover .produto-imagem-foto {
+  transform: scale(1.05) !important;
 }
 
 /* Badge de categoria */

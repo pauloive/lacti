@@ -49,7 +49,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="footer-logo">
               <Image
-                src="/images/lactifoz-logo.png"
+                src="/images/lactifoz-logo-transparente.png"
                 alt="Lactifoz"
                 width={130}
                 height={60}
