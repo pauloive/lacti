@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import LogoPeixe from './LogoPeixe';
+import Image from 'next/image';
 import './Navbar.css';
 
 const links = [
@@ -27,7 +27,16 @@ export default function Navbar() {
       <div className="container navbar-interior">
 
         <Link href="/" className="navbar-logo">
-          <LogoPeixe width={130} height={58} />
+          <span className="navbar-logo-pastilha">
+            <Image
+              src="/images/lactifoz-logo-oficial.png"
+              alt="Lactifoz"
+              width={984}
+              height={388}
+              className="navbar-logo-img"
+              priority
+            />
+          </span>
         </Link>
 
         <nav className={`navbar-links${menuAberto ? ' aberto' : ''}`} aria-label="Navegação principal">

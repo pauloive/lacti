@@ -39,6 +39,9 @@ yarn-error.log*
 # claude code (configurações locais)
 .claude/
 
+# ficheiros enviados pelo cliente (não fazem parte do site)
+/anexos/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

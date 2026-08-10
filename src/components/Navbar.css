@@ -35,8 +35,17 @@
   flex-shrink: 0;
 }
 
-.navbar-logo img {
-  border-radius: 4px;
+.navbar-logo-pastilha {
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-branco);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+
+.navbar-logo-img {
+  height: 36px;
+  width: auto;
 }
 
 /* Links desktop */

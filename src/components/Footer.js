@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import LogoPeixe from './LogoPeixe';
+import Image from 'next/image';
 import './Footer.css';
 
 const anoAtual = new Date().getFullYear();
@@ -48,7 +48,15 @@ export default function Footer() {
           {/* Marca */}
           <div>
             <Link href="/" className="footer-logo">
-              <LogoPeixe width={140} height={62} />
+              <span className="footer-logo-pastilha">
+                <Image
+                  src="/images/lactifoz-logo-oficial.png"
+                  alt="Lactifoz"
+                  width={984}
+                  height={388}
+                  className="footer-logo-img"
+                />
+              </span>
             </Link>
             <p className="footer-descricao">
               Transformação e comércio de peixes e marisco
