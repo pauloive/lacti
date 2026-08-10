@@ -119,6 +119,32 @@
   height: 16px;
 }
 
+/* Financiamento Portugal 2030 */
+.footer-financiamento {
+  display: flex;
+  justify-content: center;
+  padding: var(--espaco-lg) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-financiamento-selo {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--cor-branco);
+  border-radius: 8px;
+  padding: 10px 18px;
+  transition: transform var(--transicao);
+}
+
+.footer-financiamento-selo:hover {
+  transform: scale(1.03);
+}
+
+.footer-financiamento-selo img {
+  height: 40px;
+  width: auto;
+}
+
 /* Barra inferior */
 .footer-barra {
   padding: var(--espaco-md) 0;

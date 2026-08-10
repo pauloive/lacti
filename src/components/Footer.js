@@ -121,6 +121,22 @@ export default function Footer() {
 
         </div>
 
+        {/* Financiamento Portugal 2030 */}
+        <div className="footer-financiamento">
+          <a
+            href="/financiamento-mar2030"
+            className="footer-financiamento-selo"
+            aria-label="Ver ficha do projeto cofinanciado pela União Europeia — Mar2030/Portugal 2030"
+          >
+            <Image
+              src="/images/financiamento-mar2030.webp"
+              alt="Mar 2030 · Portugal 2030 · Cofinanciado pela União Europeia"
+              width={489}
+              height={62}
+            />
+          </a>
+        </div>
+
         {/* Barra de copyright */}
         <div className="footer-barra">
           <p className="footer-copyright">
