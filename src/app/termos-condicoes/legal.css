@@ -1,0 +1,173 @@
+/* =============================================
+   PÁGINAS LEGAIS — Lactifoz
+   ============================================= */
+
+.legal-pagina {
+  padding: calc(var(--espaco-3xl) + 2rem) 0 var(--espaco-3xl);
+  background: linear-gradient(180deg, var(--cor-cinza) 0%, var(--cor-branco) 100%);
+  min-height: 100vh;
+}
+
+.legal-conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--cor-branco);
+  border-radius: 12px;
+  padding: var(--espaco-xl) var(--espaco-xl);
+  box-shadow: var(--sombra-sm);
+}
+
+.legal-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: var(--texto-4xl);
+  color: var(--cor-marinho);
+  margin-bottom: var(--espaco-xs);
+  line-height: 1.2;
+  position: relative;
+  padding-bottom: var(--espaco-md);
+}
+
+.legal-titulo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--cor-dourado);
+}
+
+.legal-atualizacao {
+  font-size: var(--texto-sm);
+  color: var(--cor-texto-suave);
+  margin-bottom: var(--espaco-xl);
+  font-style: italic;
+}
+
+.legal-secao {
+  margin-bottom: var(--espaco-xl);
+}
+
+.legal-secao:last-child {
+  margin-bottom: 0;
+}
+
+.legal-secao h2 {
+  font-family: var(--fonte-titulo);
+  font-size: var(--texto-2xl);
+  color: var(--cor-marinho);
+  margin-bottom: var(--espaco-sm);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--cor-cinza-mid);
+}
+
+.legal-secao h3 {
+  font-size: var(--texto-lg);
+  color: var(--cor-marinho-mid);
+  margin-top: var(--espaco-md);
+  margin-bottom: var(--espaco-xs);
+  font-weight: 600;
+}
+
+.legal-secao p {
+  color: var(--cor-texto-suave);
+  line-height: 1.8;
+  margin-bottom: var(--espaco-sm);
+}
+
+.legal-secao ul {
+  margin: var(--espaco-xs) 0 var(--espaco-sm) var(--espaco-md);
+  list-style: none;
+}
+
+.legal-secao ul li {
+  color: var(--cor-texto-suave);
+  line-height: 1.8;
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.legal-secao ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  background: var(--cor-dourado);
+  border-radius: 50%;
+}
+
+.legal-secao a {
+  color: var(--cor-marinho-claro);
+  text-decoration: underline;
+  transition: color var(--transicao);
+}
+
+.legal-secao a:hover {
+  color: var(--cor-dourado);
+}
+
+/* Tabela de Cookies */
+.legal-tabela-wrapper {
+  overflow-x: auto;
+  margin: var(--espaco-sm) 0;
+  border-radius: 8px;
+  border: 1px solid var(--cor-cinza-mid);
+}
+
+.legal-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--texto-sm);
+}
+
+.legal-tabela thead {
+  background: var(--cor-marinho);
+  color: var(--cor-branco);
+}
+
+.legal-tabela th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.legal-tabela td {
+  padding: 0.75rem 1rem;
+  color: var(--cor-texto-suave);
+  border-bottom: 1px solid var(--cor-cinza-mid);
+}
+
+.legal-tabela tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.legal-tabela tbody tr:nth-child(even) {
+  background: var(--cor-cinza);
+}
+
+/* =============================================
+   RESPONSIVO
+   ============================================= */
+
+@media (max-width: 768px) {
+  .legal-pagina {
+    padding: calc(var(--espaco-2xl) + 2rem) 0 var(--espaco-2xl);
+  }
+
+  .legal-conteudo {
+    padding: var(--espaco-lg) var(--espaco-sm);
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .legal-titulo {
+    font-size: var(--texto-3xl);
+  }
+
+  .legal-secao h2 {
+    font-size: var(--texto-xl);
+  }
+}

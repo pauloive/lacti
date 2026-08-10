@@ -119,8 +119,10 @@ export default function Footer() {
             © {anoAtual} Lactifoz - Transformação e Comércio de Peixes e Marisco, S.A. Todos os direitos reservados.
           </p>
           <div className="footer-legal">
-            <a href="#" className="footer-legal-link">Política de Privacidade</a>
-            <a href="#" className="footer-legal-link">Termos de Uso</a>
+            <Link href="/politica-privacidade" className="footer-legal-link">Política de Privacidade</Link>
+            <Link href="/termos-condicoes" className="footer-legal-link">Termos e Condições</Link>
+            <Link href="/politica-cookies" className="footer-legal-link">Política de Cookies</Link>
+            <a href="https://www.livroreclamacoes.pt/" className="footer-legal-link" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a>
           </div>
         </div>
 
