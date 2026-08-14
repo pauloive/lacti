@@ -35,16 +35,8 @@
   flex-shrink: 0;
 }
 
-.navbar-logo-pastilha {
-  display: flex;
-  align-items: center;
-  background-color: var(--cor-branco);
-  border-radius: 999px;
-  padding: 6px 14px;
-}
-
 .navbar-logo-img {
-  height: 36px;
+  height: 44px;
   width: auto;
 }
 
