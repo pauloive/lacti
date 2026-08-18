@@ -65,7 +65,7 @@ export default function SobreNos() {
                   width={154}
                   height={69}
                   className="sobre-marcas-logo"
-                  style={{ marginLeft: '2px' }}
+                  style={{ marginLeft: '4px' }}
                 />
               </div>
             </div>
