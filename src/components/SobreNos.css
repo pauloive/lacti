@@ -55,9 +55,9 @@
 .sobre-marcas-linha {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: var(--espaco-lg);
-  max-width: 594px;
+  flex-wrap: nowrap;
+  gap: var(--espaco-sm);
+  max-width: 100%;
 }
 
 .sobre-marcas-logo {
