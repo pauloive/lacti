@@ -4,48 +4,53 @@ import './Produtos.css';
 const produtos = [
   {
     id: 1,
-    titulo: 'Peixe Fresco',
+    titulo: 'Peixe Inteiro, Posta, Granel, emb. Saco kg e Covete',
     badge: 'Seleção Diária',
     descricao:
-      'Do mar diretamente à sua mesa. Selecionamos cada dia os melhores exemplares, garantindo frescura máxima e qualidade certificada em toda a nossa gama de peixe fresco.',
+      'Do mar diretamente à sua mesa. Selecionamos cada dia os melhores exemplares, garantindo frescura máxima e qualidade em toda a nossa gama de peixe fresco.',
     itens: ['Pescada', 'Dourada', 'Robalo', 'Salmão', 'Bacalhau fresco'],
     imagem: '/images/produtos/peixe-fresco.jpg',
+    mostrarNumero: false,
   },
   {
     id: 2,
-    titulo: 'Marisco',
+    titulo: 'Mariscos, Crustáceos e Moluscos',
     badge: 'Produto Premium',
     descricao:
       'Uma seleção rigorosa dos melhores mariscos da costa portuguesa. Camarão, amêijoa, sapateira e muito mais, sempre frescos e prontos a saborear.',
-    itens: ['Camarão', 'Amêijoa', 'Sapateira', 'Lagostim', 'Percebe'],
+    itens: ['Camarão', 'Amêijoa', 'Sapateira', 'Lagostim'],
     imagem: '/images/produtos/marisco.jpg',
+    mostrarNumero: false,
   },
   {
     id: 3,
-    titulo: 'Conservas',
+    titulo: 'Charcutaria, Enlatados, Lacticínios',
     badge: 'Tradição Portuguesa',
     descricao:
-      'A arte da conserva elevada ao máximo. Os nossos produtos em conserva preservam todo o sabor e os nutrientes do peixe, com receitas que respeitam a tradição portuguesa.',
-    itens: ['Atum em azeite', 'Sardinha', 'Cavala', 'Polvo', 'Bacalhau em azeite'],
-    imagem: '/images/produtos/conservas.jpg',
+      'Uma seleção completa de charcutaria, enlatados e laticínios de qualidade, pensada para complementar a sua oferta com produtos de conveniência e sabor garantido.',
+    itens: ['Fiambre', 'Chouriço', 'Atum enlatado', 'Queijo', 'Manteiga'],
+    imagem: '/images/produtos/charcutaria-lacticinios.jpg',
+    mostrarNumero: false,
   },
   {
     id: 4,
-    titulo: 'Congelados',
+    titulo: 'Carnes Congeladas',
     badge: 'Frescura Preservada',
     descricao:
       'Tecnologia de congelação de última geração que preserva toda a frescura, textura e valor nutritivo dos nossos produtos. Qualidade garantida em cada embalagem.',
-    itens: ['Filetes de peixe', 'Miolo de camarão', 'Lulas', 'Polvo', 'Mix de mariscos'],
-    imagem: '/images/produtos/congelados.jpg',
+    itens: ['Bovino', 'Suíno', 'Frango', 'Peru'],
+    imagem: '/images/produtos/carnes-congeladas.jpg',
+    mostrarNumero: false,
   },
   {
     id: 5,
-    titulo: 'Fumados',
-    badge: 'Sabor Artesanal',
+    titulo: 'Pré-Cozinhados, Panados',
+    badge: 'Pronto a Servir',
     descricao:
-      'Técnicas artesanais de fumagem que conferem sabores únicos e intensos. Produtos de excelência para quem aprecia o melhor da gastronomia do mar.',
-    itens: ['Salmão fumado', 'Truta fumada', 'Enguia fumada', 'Bacalhau fumado'],
-    imagem: '/images/produtos/fumados.jpg',
+      'Uma gama variada de produtos pré-cozinhados e panados, práticos e saborosos, prontos a preparar em poucos minutos — a solução ideal para o dia a dia.',
+    itens: ['Douradinhos', 'Filetes panados', 'Bolinhos de bacalhau', 'Rissóis', 'Croquetes'],
+    imagem: '/images/produtos/pre-cozinhados-panados.jpg',
+    mostrarNumero: false,
   },
 ];
 
@@ -66,7 +71,9 @@ function ProductCard({ produto, invertido }) {
       </div>
 
       <div className="produto-conteudo">
-        <span className="produto-numero">0{produto.id}</span>
+        {produto.mostrarNumero !== false && (
+          <span className="produto-numero">0{produto.id}</span>
+        )}
         <h3 className="produto-titulo">{produto.titulo}</h3>
         <p className="produto-descricao">{produto.descricao}</p>
         <ul className="produto-lista" aria-label={`Exemplos de ${produto.titulo}`}>

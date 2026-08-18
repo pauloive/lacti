@@ -27,7 +27,7 @@ export default function Hero() {
           <span className="hero-etiqueta">Tradição e Qualidade</span>
 
           <h1 className="hero-titulo">
-            O Melhor do Mar,<br />
+            O Melhor do Mar e<br />
             da Nossa Terra<br />
             para a <span>Sua Mesa</span>
           </h1>
@@ -35,7 +35,6 @@ export default function Hero() {
           <p className="hero-subtitulo">
             Há décadas a transformar e comercializar peixes e marisco
             com rigor, frescura e paixão pelo que fazemos.
-            Qualidade certificada, diretamente para si.
           </p>
 
           <div className="hero-acoes">

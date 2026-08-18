@@ -60,8 +60,7 @@ export default function Footer() {
             </Link>
             <p className="footer-descricao">
               Transformação e comércio de peixes e marisco
-              com tradição, frescura e qualidade certificada.
-              O melhor do mar para a sua mesa.
+              com tradição, frescura e qualidade do mar para a sua mesa.
             </p>
             <div className="footer-redes">
               <a href="https://www.facebook.com/profile.php?id=100008940099606" className="footer-rede" aria-label="Facebook da Lactifoz" target="_blank" rel="noopener noreferrer">

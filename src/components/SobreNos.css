@@ -35,33 +35,35 @@
   margin-bottom: var(--espaco-md);
 }
 
-/* Estatísticas */
-.sobre-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--espaco-md);
+/* Marcas */
+.sobre-marcas {
   margin-top: var(--espaco-xl);
   padding-top: var(--espaco-xl);
   border-top: 1px solid var(--cor-cinza-mid);
 }
 
-.stat-numero {
-  font-family: var(--fonte-titulo);
-  font-size: var(--texto-4xl);
+.sobre-marcas-etiqueta {
+  display: block;
+  font-size: var(--texto-xs);
   font-weight: 700;
-  color: var(--cor-marinho);
-  line-height: 1;
-  margin-bottom: var(--espaco-xs);
-}
-
-.stat-numero span {
-  color: var(--cor-dourado);
-}
-
-.stat-texto {
-  font-size: var(--texto-sm);
   color: var(--cor-texto-suave);
-  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: var(--espaco-md);
+}
+
+.sobre-marcas-linha {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--espaco-lg);
+  max-width: 380px;
+}
+
+.sobre-marcas-logo {
+  width: auto;
+  height: 44px;
+  object-fit: contain;
 }
 
 /* Coluna de imagem */
@@ -113,7 +115,12 @@
 }
 
 @media (max-width: 480px) {
-  .sobre-stats {
-    grid-template-columns: 1fr 1fr;
+  .sobre-marcas-linha {
+    max-width: 280px;
+    gap: var(--espaco-md);
+  }
+
+  .sobre-marcas-logo {
+    height: 34px;
   }
 }

@@ -1,12 +1,5 @@
 import Image from 'next/image';
-import ContadorAnimado from './ContadorAnimado';
 import './SobreNos.css';
-
-const stats = [
-  { numero: 30, sufixo: '+', texto: 'Anos de\nExperiência' },
-  { numero: 100, sufixo: '%', texto: 'Qualidade\nCertificada' },
-  { numero: 5, sufixo: '+', texto: 'Categorias\nde Produto' },
-];
 
 export default function SobreNos() {
   return (
@@ -19,34 +12,61 @@ export default function SobreNos() {
             <span className="sobre-etiqueta">A Nossa História</span>
             <div className="linha-dourada" />
             <h2 className="secao-titulo sobre-titulo">
-              Décadas de Dedicação<br />ao Mar
+              LACTIFOZ — Qualidade e experiência no setor alimentar
             </h2>
             <p className="sobre-texto">
-              A Lactifoz nasceu da paixão pelo mar e pelo rigor na seleção
-              dos melhores produtos. Desde a nossa fundação, temos trabalhado
-              lado a lado com pescadores e produtores locais para garantir que
-              cada peixe e marisco chega à sua mesa com a máxima frescura e qualidade.
+              Com raízes em 1987 e fundada em 1996, a LACTIFOZ – Transformação e Comércio
+              de Peixes e Mariscos, S.A. dedica-se à Transformação e Comercialização de produtos alimentares de
+              qualidade, com presença nos mercados comunitário e extracomunitário.
             </p>
             <p className="sobre-texto">
-              Com instalações modernas e certificadas, asseguramos os mais altos
-              padrões de transformação e conservação, respeitando o ambiente
-              e valorizando os recursos do nosso litoral. A nossa missão é
-              simples: levar o melhor do mar até si.
+              Aliamos experiência, qualidade e inovação a uma ampla gama de produtos, através
+              das nossas marcas Marazul, Pescafish e Quinta da Villa.
+            </p>
+            <p className="sobre-texto">
+              Apostando continuamente na qualidade dos produtos e na prestação de um
+              serviço de excelência, a LACTIFOZ mantém uma postura dinâmica e orientada para
+              o futuro, procurando construir relações de confiança e oferecer aos seus clientes
+              soluções que respondam às necessidades de um mercado em constante evolução.
+            </p>
+            <p className="sobre-texto">
+              Hoje, mantemos o espírito familiar que está na nossa origem, aliado a uma estrutura
+              dinâmica e preparada para os desafios do mercado nacional e internacional.
+            </p>
+            <p className="sobre-texto">
+              As nossas marcas Marazul, Pescafish e Quinta da Villa refletem o nosso
+              compromisso com a qualidade e a satisfação dos nossos clientes.
+            </p>
+            <p className="sobre-texto">
+              Crescemos com o tempo, mas mantemos os valores de sempre: qualidade,
+              proximidade e confiança.
             </p>
 
-            <div className="sobre-stats">
-              {stats.map((stat) => (
-                <div key={stat.texto}>
-                  <div className="stat-numero">
-                    <ContadorAnimado valor={stat.numero} sufixo={stat.sufixo} />
-                  </div>
-                  <div className="stat-texto">
-                    {stat.texto.split('\n').map((linha, i) => (
-                      <span key={i}>{linha}{i === 0 && <br />}</span>
-                    ))}
-                  </div>
-                </div>
-              ))}
+            <div className="sobre-marcas">
+              <span className="sobre-marcas-etiqueta">As Nossas Marcas</span>
+              <div className="sobre-marcas-linha">
+                <Image
+                  src="/images/marcas/marazul.png"
+                  alt="Marca Marazul"
+                  width={106}
+                  height={44}
+                  className="sobre-marcas-logo"
+                />
+                <Image
+                  src="/images/marcas/pescafixe.png"
+                  alt="Marca Pescafixe"
+                  width={75}
+                  height={44}
+                  className="sobre-marcas-logo"
+                />
+                <Image
+                  src="/images/marcas/quinta-da-villa.png"
+                  alt="Marca Quinta da Villa"
+                  width={98}
+                  height={44}
+                  className="sobre-marcas-logo"
+                />
+              </div>
             </div>
           </div>
 
