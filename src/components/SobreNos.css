@@ -61,6 +61,7 @@
 }
 
 .sobre-marcas-logo {
+  flex-shrink: 0;
   width: auto;
   height: 69px;
   object-fit: contain;
@@ -116,8 +117,9 @@
 
 @media (max-width: 480px) {
   .sobre-marcas-linha {
-    max-width: 438px;
-    gap: var(--espaco-md);
+    max-width: 100%;
+    flex-wrap: nowrap;
+    gap: var(--espaco-xs);
   }
 
   .sobre-marcas-logo {
