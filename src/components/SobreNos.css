@@ -57,12 +57,12 @@
   align-items: center;
   flex-wrap: wrap;
   gap: var(--espaco-lg);
-  max-width: 380px;
+  max-width: 475px;
 }
 
 .sobre-marcas-logo {
   width: auto;
-  height: 44px;
+  height: 55px;
   object-fit: contain;
 }
 
@@ -116,11 +116,11 @@
 
 @media (max-width: 480px) {
   .sobre-marcas-linha {
-    max-width: 280px;
+    max-width: 350px;
     gap: var(--espaco-md);
   }
 
   .sobre-marcas-logo {
-    height: 34px;
+    height: 43px;
   }
 }
