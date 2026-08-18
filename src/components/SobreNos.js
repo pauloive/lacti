@@ -48,22 +48,22 @@ export default function SobreNos() {
                 <Image
                   src="/images/marcas/marazul.png"
                   alt="Marca Marazul"
-                  width={133}
-                  height={55}
+                  width={166}
+                  height={69}
                   className="sobre-marcas-logo"
                 />
                 <Image
                   src="/images/marcas/pescafixe.png"
                   alt="Marca Pescafixe"
-                  width={94}
-                  height={55}
+                  width={118}
+                  height={69}
                   className="sobre-marcas-logo"
                 />
                 <Image
                   src="/images/marcas/quinta-da-villa.png"
                   alt="Marca Quinta da Villa"
-                  width={123}
-                  height={55}
+                  width={154}
+                  height={69}
                   className="sobre-marcas-logo"
                 />
               </div>
